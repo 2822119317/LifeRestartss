@@ -366,7 +366,7 @@ pair<int, int> getScoreRange(int iq)
 // 调用 getScoreRange 函数来获取一个分数范围再 从返回的分数范围内利用随机数返回最后的实际的高考分数
 int getScore(int iq) {
 	int score;
-	std::pair<int, int> scoreRange = getScoreRange(iq);
+	pair<int, int> scoreRange = getScoreRange(iq);
 	/*std::srand(std::time(0));*/
 	score = scoreRange.first + (std::rand() % (scoreRange.second - scoreRange.first + 1));
 	return score;
